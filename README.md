@@ -15,8 +15,8 @@ This repository is my learning progress at class: Belajar Membuat Aplikasi Flutt
 
 2. Track informations and detail.
 - [x] List of Tracks.
-- [] Track search.
-- [] Detail & Trivia about Track.
+- [x] Track search.
+- [x] Detail & Trivia about Track.
 
 
 ## Setup Project
