@@ -1,6 +1,6 @@
 # Aplikasi EFwan
 
-This repository is my learning progress at class: Belajar Membuat Aplikasi Flutter untuk Pemula at Dicoding Indonesia. I've been enrolled this class as a part of IDCamp participant 2022.
+This repository is my learning progress at class: Belajar Membuat Aplikasi Flutter untuk Pemula at Dicoding Indonesia. I've been enrolled this class as a part of IDCamp 2022.
 
 ## Preview Screen
 

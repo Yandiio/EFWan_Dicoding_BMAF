@@ -15,7 +15,11 @@ class DetailDriverScreen extends StatelessWidget {
         child: Column(
           children: [
             Image.network(driver.driverImageUrl!),
-            Text(driver.firstName!),
+            Row(
+              children: [
+                Text(driver.firstName!),
+              ],
+            ),
             Text(driver.lastName!),
             Text(driver.standing!),
             Text(driver.point.toString()),
