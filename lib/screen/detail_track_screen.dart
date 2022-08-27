@@ -18,21 +18,31 @@ class DetailTrackScreen extends StatelessWidget {
         ),
         body: SingleChildScrollView(
           child: Container(
-            padding: EdgeInsets.symmetric(vertical: 16.0),
+            padding:
+                const EdgeInsets.symmetric(vertical: 16.0, horizontal: 8.0),
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
                 Image.network(track.trackImageUrl!),
+                SizedBox(
+                  height: 16.0,
+                ),
                 Row(
                   mainAxisAlignment: MainAxisAlignment.center,
-                  crossAxisAlignment: CrossAxisAlignment.center,
+                  // crossAxisAlignment: CrossAxisAlignment.center,
                   children: [
-                    // Expanded(child: Image.network(track.nationalityImageUrl!)),
+                    Expanded(
+                      child: Image.network(
+                        track.nationalityImageUrl!,
+                        height: 50,
+                        width: 50,
+                      ),
+                    ),
                     const SizedBox(
                       width: 10.0,
                     ),
                     Expanded(
-                      flex: 4,
+                      flex: 3,
                       child: Text(
                         track.name!,
                         style: textTitle,
@@ -40,12 +50,15 @@ class DetailTrackScreen extends StatelessWidget {
                     ),
                   ],
                 ),
+                SizedBox(
+                  height: 16.0,
+                ),
                 Row(
                   children: [
                     Expanded(
                       child: Column(
                         children: [
-                          Text('Country'),
+                          Text('Country', style: textHeaderCard),
                           Text(track.nationality!),
                         ],
                       ),
@@ -53,7 +66,7 @@ class DetailTrackScreen extends StatelessWidget {
                     Expanded(
                       child: Column(
                         children: [
-                          Text('First Grand Prix'),
+                          Text('First Grand Prix', style: textHeaderCard),
                           Text(track.firstGrandPrix!),
                         ],
                       ),
@@ -61,19 +74,22 @@ class DetailTrackScreen extends StatelessWidget {
                     Expanded(
                       child: Column(
                         children: [
-                          Text('Circuit Length'),
+                          Text('Circuit Length', style: textHeaderCard),
                           Text('${track.circuitLength.toString()} Km'),
                         ],
                       ),
                     ),
                   ],
                 ),
+                SizedBox(
+                  height: 16.0,
+                ),
                 Row(
                   children: [
                     Expanded(
                       child: Column(
                         children: [
-                          Text('Number of Laps'),
+                          Text('Number of Laps', style: textHeaderCard),
                           Text(track.numberOfLaps.toString()),
                         ],
                       ),
@@ -81,7 +97,7 @@ class DetailTrackScreen extends StatelessWidget {
                     Expanded(
                       child: Column(
                         children: [
-                          Text('Fastest Lap'),
+                          Text('Fastest Lap', style: textHeaderCard),
                           Text(track.lapRecord!),
                         ],
                       ),
@@ -89,7 +105,7 @@ class DetailTrackScreen extends StatelessWidget {
                     Expanded(
                       child: Column(
                         children: [
-                          Text('Race Distance'),
+                          Text('Race Distance', style: textHeaderCard),
                           Text('${track.raceDistance.toString()} Km'),
                         ],
                       ),
@@ -99,7 +115,10 @@ class DetailTrackScreen extends StatelessWidget {
                 SizedBox(
                   height: 40,
                 ),
-                Text('About This Track'),
+                Text(
+                  'About This Track',
+                  style: textHeaderInfo,
+                ),
                 SizedBox(
                   height: 8.0,
                 ),
@@ -110,57 +129,8 @@ class DetailTrackScreen extends StatelessWidget {
                 SizedBox(
                   height: 36,
                 ),
-                Text('Images'),
                 SizedBox(
                   height: 8.0,
-                ),
-                SizedBox(
-                  height: 200,
-                  child: ListView(
-                    scrollDirection: Axis.horizontal,
-                    children: [
-                      Container(
-                        height: 200,
-                        width: 200,
-                        decoration: BoxDecoration(
-                          borderRadius: BorderRadius.circular(8.0),
-                          image: DecorationImage(
-                            image: AssetImage('images/drivers.jpg'),
-                          ),
-                        ),
-                      ),
-                      Container(
-                        height: 200,
-                        width: 200,
-                        decoration: BoxDecoration(
-                          borderRadius: BorderRadius.circular(8.0),
-                          image: DecorationImage(
-                            image: AssetImage('images/drivers.jpg'),
-                          ),
-                        ),
-                      ),
-                      Container(
-                        height: 200,
-                        width: 200,
-                        decoration: BoxDecoration(
-                          borderRadius: BorderRadius.circular(8.0),
-                          image: DecorationImage(
-                            image: AssetImage('images/drivers.jpg'),
-                          ),
-                        ),
-                      ),
-                      Container(
-                        height: 200,
-                        width: 200,
-                        decoration: BoxDecoration(
-                          borderRadius: BorderRadius.circular(8.0),
-                          image: DecorationImage(
-                            image: AssetImage('images/drivers.jpg'),
-                          ),
-                        ),
-                      ),
-                    ],
-                  ),
                 ),
               ],
             ),

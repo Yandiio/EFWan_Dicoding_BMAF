@@ -14,7 +14,7 @@ This repository is my learning progress at class: Belajar Membuat Aplikasi Flutt
 - [] Detail about driver (including team).
 
 2. Track informations and detail.
-- [] List of Tracks.
+- [x] List of Tracks.
 - [] Track search.
 - [] Detail & Trivia about Track.
 
@@ -35,4 +35,5 @@ samples, guidance on mobile development, and a full API reference.
 ## Author 
 
 - Muhammad Yandi Fenanda
+
 You can check my LinkedIn to keep in touch.
