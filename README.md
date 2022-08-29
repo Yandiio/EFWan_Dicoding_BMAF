@@ -9,9 +9,9 @@ This repository is my learning progress at class: Belajar Membuat Aplikasi Flutt
 ## App Features
 
 1. Driver Standings based on point scored.
-- [] List of Driver, based on standings.
+- [x] List of Driver, based on standings.
 - [] Driver search.
-- [] Detail about driver (including team).
+- [x] Detail about driver (including team).
 
 2. Track informations and detail.
 - [x] List of Tracks.
