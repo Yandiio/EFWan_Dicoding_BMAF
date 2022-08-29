@@ -47,17 +47,25 @@ class DetailTrackScreen extends StatelessWidget {
               mainAxisAlignment: MainAxisAlignment.center,
               crossAxisAlignment: CrossAxisAlignment.center,
               children: [
-                Image.network(
-                  track.nationalityImageUrl!,
-                  height: 50,
-                  width: 50,
+                Expanded(
+                  child: Image.network(
+                    track.nationalityImageUrl!,
+                    height: 50,
+                    width: 50,
+                  ),
                 ),
                 const SizedBox(
                   width: 10.0,
                 ),
-                Text(
-                  track.name!,
-                  style: textTitle,
+                Expanded(
+                  flex: 2,
+                  child: Padding(
+                    padding: EdgeInsets.all(16.0),
+                    child: Text(
+                      track.name!,
+                      style: textTitle,
+                    ),
+                  ),
                 ),
               ],
             ),

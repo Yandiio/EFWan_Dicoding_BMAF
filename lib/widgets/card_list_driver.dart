@@ -17,6 +17,10 @@ class CardListDriver extends StatelessWidget {
         }));
       },
       child: Card(
+        margin: const EdgeInsets.symmetric(
+          vertical: 16.0,
+          horizontal: 8.0,
+        ),
         color: Colors.black,
         shape: RoundedRectangleBorder(
           borderRadius: BorderRadius.circular(16.0),
