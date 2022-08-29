@@ -4,9 +4,9 @@ import 'package:flutter_dicoding_submission/screen/detail_track_screen.dart';
 
 import '../utils/theme.dart';
 
-class CardTrack extends StatelessWidget {
+class CardListTrack extends StatelessWidget {
   final Track track;
-  const CardTrack({Key? key, required this.track}) : super(key: key);
+  const CardListTrack({Key? key, required this.track}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -17,6 +17,7 @@ class CardTrack extends StatelessWidget {
         }));
       },
       child: Card(
+        margin: const EdgeInsets.all(8.0),
         shape: RoundedRectangleBorder(
           borderRadius: BorderRadius.circular(16.0),
         ),
@@ -42,7 +43,8 @@ class CardTrack extends StatelessWidget {
                         children: [
                           Expanded(
                             child: Container(
-                              padding: EdgeInsets.symmetric(horizontal: 8.0),
+                              padding:
+                                  const EdgeInsets.symmetric(horizontal: 8.0),
                               decoration: BoxDecoration(
                                 borderRadius: BorderRadius.circular(16.0),
                               ),
@@ -64,7 +66,7 @@ class CardTrack extends StatelessWidget {
                                 ),
                                 Text(
                                   '${track.name}',
-                                  style: TextStyle(
+                                  style: const TextStyle(
                                       color: Colors.white,
                                       fontSize: 16.0,
                                       fontFamily: 'IBM Plex Mono',
@@ -81,14 +83,14 @@ class CardTrack extends StatelessWidget {
                           ),
                         ],
                       ),
-                      SizedBox(
+                      const SizedBox(
                         height: 20.0,
                       ),
-                      Divider(
+                      const Divider(
                         color: Colors.white,
                         thickness: 2.0,
                       ),
-                      SizedBox(
+                      const SizedBox(
                         height: 20.0,
                       ),
                       Row(
@@ -104,7 +106,7 @@ class CardTrack extends StatelessWidget {
                                   padding: const EdgeInsets.all(8.0),
                                   child: Text(
                                     '${track.heldDate}',
-                                    style: TextStyle(color: Colors.white),
+                                    style: const TextStyle(color: Colors.white),
                                   ),
                                 ),
                               ),
@@ -121,11 +123,11 @@ class CardTrack extends StatelessWidget {
                                       text: TextSpan(children: [
                                         TextSpan(
                                           text: '${track.numberOfLaps}',
-                                          style: TextStyle(
+                                          style: const TextStyle(
                                               color: Colors.white,
                                               fontWeight: FontWeight.bold),
                                         ),
-                                        TextSpan(text: ' Laps')
+                                        const TextSpan(text: ' Laps')
                                       ]),
                                     ),
                                   )),

@@ -4,9 +4,9 @@ import 'package:flutter_dicoding_submission/utils/theme.dart';
 
 import '../models/driver.dart';
 
-class CardDriver extends StatelessWidget {
+class CardListDriver extends StatelessWidget {
   final Driver driver;
-  const CardDriver({Key? key, required this.driver}) : super(key: key);
+  const CardListDriver({Key? key, required this.driver}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -96,7 +96,12 @@ class CardDriver extends StatelessWidget {
                                             color: Colors.white,
                                             fontWeight: FontWeight.bold),
                                       ),
-                                      TextSpan(text: ' Pts')
+                                      TextSpan(
+                                        text: ' Pts',
+                                        style: TextStyle(
+                                          color: Colors.white,
+                                        ),
+                                      ),
                                     ]),
                                   ),
                                 )),
@@ -121,11 +126,12 @@ class CardDriver extends StatelessWidget {
                               decoration: BoxDecoration(
                                   color: Colors.white70,
                                   borderRadius: BorderRadius.circular(8.0)),
-                              child: const Padding(
-                                padding: EdgeInsets.all(8.0),
-                                child: Text(
-                                  'Bio',
-                                  style: TextStyle(color: Colors.white),
+                              child: Padding(
+                                padding: const EdgeInsets.all(8.0),
+                                child: Image.network(
+                                  driver.nationalityImageUrl!,
+                                  height: 18,
+                                  width: 50,
                                 ),
                               ),
                             ),

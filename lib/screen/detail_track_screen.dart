@@ -17,13 +17,13 @@ class DetailTrackScreen extends StatelessWidget {
           if (constraints.maxWidth >= 900) {
             return Scaffold(
                 appBar: AppBar(
-                  title: Text('Track Detail ${constraints.maxWidth}'),
+                  title: const Text('Track Detail'),
                 ),
                 body: _detailWideScreen());
           } else {
             return Scaffold(
                 appBar: AppBar(
-                  title: Text('Track Detail ${constraints.maxWidth}'),
+                  title: const Text('Track Detail'),
                 ),
                 body: _detailSmallScreen());
           }
@@ -164,17 +164,21 @@ class DetailTrackScreen extends StatelessWidget {
                     mainAxisAlignment: MainAxisAlignment.center,
                     crossAxisAlignment: CrossAxisAlignment.center,
                     children: [
-                      Image.network(
-                        track.nationalityImageUrl!,
-                        height: 50,
-                        width: 50,
+                      Expanded(
+                        child: Image.network(
+                          track.nationalityImageUrl!,
+                          height: 50,
+                          width: 50,
+                        ),
                       ),
                       const SizedBox(
                         width: 10.0,
                       ),
-                      Text(
-                        track.name!,
-                        style: textTitle,
+                      Expanded(
+                        child: Text(
+                          track.name!,
+                          style: textTitle,
+                        ),
                       ),
                     ],
                   ),

@@ -1,7 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_dicoding_submission/data/list_data_track.dart';
 import 'package:flutter_dicoding_submission/models/track.dart';
-import 'package:flutter_dicoding_submission/widgets/card_track.dart';
+import 'package:flutter_dicoding_submission/widgets/card_grid_track.dart';
+import 'package:flutter_dicoding_submission/widgets/card_list_track.dart';
 
 class TrackScreen extends StatefulWidget {
   const TrackScreen({Key? key}) : super(key: key);
@@ -30,12 +31,14 @@ class _TrackScreenState extends State<TrackScreen> {
           onChanged: (value) {
             if (_filter.text.isNotEmpty) {
               trackListData.forEach((item) {
-                print(value);
-                if (item.name!.contains(value)) {
+                if (item.name!.toLowerCase().contains(value)) {
                   setState(() {
                     trackList.clear();
                     trackList.add(item);
                   });
+                } else if (value.isEmpty) {
+                  trackList.clear();
+                  trackList.addAll(trackListData);
                 }
               });
             } else if (_filter.text.isEmpty) {
@@ -47,8 +50,8 @@ class _TrackScreenState extends State<TrackScreen> {
           },
         );
       } else {
-        _searchIcon = Icon(Icons.search);
-        _appBarTitle = Text('Tracks');
+        _searchIcon = const Icon(Icons.search);
+        _appBarTitle = const Text('Tracks');
         _filter.clear();
       }
     });
@@ -71,17 +74,34 @@ class _TrackScreenState extends State<TrackScreen> {
     return Scaffold(
       appBar: AppBar(
         title: _appBarTitle,
-        leading: IconButton(onPressed: _searchPressed, icon: _searchIcon),
+        leading: IconButton(
+            onPressed: () => Navigator.pop(context),
+            icon: const Icon(Icons.arrow_back_ios)),
+        actions: [IconButton(onPressed: _searchPressed, icon: _searchIcon)],
       ),
       body: LayoutBuilder(
         builder: (BuildContext context, BoxConstraints constraints) {
-          return ListView.builder(
-            scrollDirection: Axis.vertical,
-            itemCount: trackList.length,
-            itemBuilder: (BuildContext context, int index) {
-              return CardTrack(track: trackList[index]);
-            },
-          );
+          if (constraints.maxWidth >= 800) {
+            return GridView.builder(
+              itemCount: trackList.length,
+              itemBuilder: (BuildContext context, int index) {
+                return CardGridTrack(track: trackList[index]);
+              },
+              gridDelegate: const SliverGridDelegateWithMaxCrossAxisExtent(
+                  maxCrossAxisExtent: 300,
+                  childAspectRatio: 3 / 2,
+                  crossAxisSpacing: 16,
+                  mainAxisSpacing: 20),
+            );
+          } else {
+            return ListView.builder(
+              scrollDirection: Axis.vertical,
+              itemCount: trackList.length,
+              itemBuilder: (BuildContext context, int index) {
+                return CardListTrack(track: trackList[index]);
+              },
+            );
+          }
         },
       ),
     );

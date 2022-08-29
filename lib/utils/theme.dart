@@ -8,7 +8,7 @@ const textCardTitle = TextStyle(
 
 const textTitle = TextStyle(
     color: Colors.black,
-    fontSize: 32.0,
+    fontSize: 28.0,
     fontFamily: 'IBM Plex Mono',
     fontWeight: FontWeight.w500);
 
@@ -20,7 +20,7 @@ const textHeaderCard = TextStyle(
 
 const textHeaderInfo = TextStyle(
     color: Colors.black87,
-    fontSize: 16.0,
+    fontSize: 18.0,
     fontFamily: 'IBM Plex Mono',
     fontWeight: FontWeight.w600);
 

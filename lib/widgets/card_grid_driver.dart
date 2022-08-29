@@ -17,132 +17,78 @@ class CardGridDriver extends StatelessWidget {
         }));
       },
       child: Card(
-        color: Colors.black,
+        color: Color(driver.teamColorHex ?? 0xfffffff),
         shape: RoundedRectangleBorder(
           borderRadius: BorderRadius.circular(16.0),
         ),
         child: Padding(
           padding: const EdgeInsets.all(16.0),
-          child: Row(
+          child: Column(
             children: [
               Expanded(
                 flex: 2,
                 child: Column(
                   crossAxisAlignment: CrossAxisAlignment.stretch,
                   children: [
-                    Row(
-                      children: [
-                        Expanded(
-                          flex: 2,
-                          child: Column(
-                            crossAxisAlignment: CrossAxisAlignment.start,
-                            children: [
-                              Text(
-                                '${driver.carNumber}',
-                                style: textNumber,
-                                textAlign: TextAlign.start,
-                              ),
-                              Text(
-                                '${driver.firstName}',
-                                style: textCardTitle,
-                                textAlign: TextAlign.start,
-                              ),
-                              Text(
-                                '${driver.lastName}',
-                                style: textCardTitle,
-                                textAlign: TextAlign.start,
-                              ),
-                            ],
-                          ),
-                        ),
-                        Expanded(
-                          child: Container(
-                            decoration: BoxDecoration(
-                                borderRadius: BorderRadius.circular(8.0),
-                                color: Color(driver.teamColorHex ?? 0xfffffff)),
-                            child: driver.driverImageUrl != null
-                                ? Image.network(driver.driverImageUrl ?? "-")
-                                : Image.asset('name'),
-                          ),
-                        ),
-                      ],
-                    ),
-                    SizedBox(
-                      height: 20.0,
-                    ),
-                    Divider(
-                      color: Colors.white,
-                      thickness: 2.0,
-                    ),
-                    SizedBox(
-                      height: 20.0,
-                    ),
-                    Row(
-                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                      children: [
-                        Row(
-                          children: [
-                            Container(
-                                decoration: BoxDecoration(
-                                    color: Colors.white70,
-                                    borderRadius: BorderRadius.circular(8.0)),
-                                child: Padding(
-                                  padding: const EdgeInsets.all(8.0),
-                                  child: RichText(
-                                    text: TextSpan(children: [
-                                      TextSpan(
-                                        text: '${driver.point}',
-                                        style: TextStyle(
-                                            color: Colors.white,
-                                            fontWeight: FontWeight.bold),
-                                      ),
-                                      TextSpan(
-                                        text: ' Pts',
-                                        style: TextStyle(
-                                          color: Colors.white,
-                                        ),
-                                      ),
-                                    ]),
-                                  ),
-                                )),
-                            const SizedBox(
-                              width: 4.0,
-                            ),
-                            Container(
-                                decoration: BoxDecoration(
-                                    color: Colors.white70,
-                                    borderRadius: BorderRadius.circular(8.0)),
-                                child: Padding(
-                                  padding: const EdgeInsets.all(8.0),
-                                  child: Text(
-                                    '${driver.teamName}',
-                                    style: TextStyle(color: Colors.white),
-                                  ),
-                                )),
-                            const SizedBox(
-                              width: 4.0,
-                            ),
-                            Container(
-                              decoration: BoxDecoration(
-                                  color: Colors.white70,
-                                  borderRadius: BorderRadius.circular(8.0)),
-                              child: Padding(
-                                padding: const EdgeInsets.all(8.0),
-                                child: Image.network(
-                                  driver.nationalityImageUrl!,
-                                  height: 18,
-                                  width: 50,
+                    Expanded(
+                      flex: 3,
+                      child: Row(
+                        children: [
+                          Expanded(
+                            flex: 2,
+                            child: Column(
+                              crossAxisAlignment: CrossAxisAlignment.start,
+                              children: [
+                                Text(
+                                  '${driver.carNumber}',
+                                  style: const TextStyle(
+                                      color: Colors.white,
+                                      fontSize: 16.0,
+                                      fontFamily: 'IBM Plex Mono',
+                                      fontWeight: FontWeight.w200),
+                                  textAlign: TextAlign.start,
                                 ),
-                              ),
+                                Text(
+                                  '${driver.firstName}',
+                                  style: const TextStyle(
+                                      color: Colors.white,
+                                      fontSize: 20.0,
+                                      fontFamily: 'IBM Plex Mono',
+                                      fontWeight: FontWeight.w200),
+                                  textAlign: TextAlign.start,
+                                ),
+                                Text(
+                                  '${driver.lastName}',
+                                  style: const TextStyle(
+                                      color: Colors.white,
+                                      fontSize: 20.0,
+                                      fontFamily: 'IBM Plex Mono',
+                                      fontWeight: FontWeight.w200),
+                                  textAlign: TextAlign.start,
+                                ),
+                              ],
                             ),
-                          ],
-                        ),
-                        const Icon(
-                          Icons.info_sharp,
-                          size: 30,
-                          color: Colors.white,
-                        )
-                      ],
+                          ),
+                          Expanded(
+                            child: Container(
+                              decoration: BoxDecoration(
+                                  border: Border.all(color: Colors.white),
+                                  borderRadius: BorderRadius.circular(8.0),
+                                  color:
+                                      Color(driver.teamColorHex ?? 0xfffffff)),
+                              child: driver.driverImageUrl != null
+                                  ? Image.network(driver.driverImageUrl ?? "-")
+                                  : Image.asset('name'),
+                            ),
+                          ),
+                        ],
+                      ),
+                    ),
+                    const Expanded(
+                      child: Divider(
+                        color: Colors.white,
+                        thickness: 2.0,
+                      ),
                     ),
                   ],
                 ),

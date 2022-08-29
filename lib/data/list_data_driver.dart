@@ -164,7 +164,7 @@ var list_data_driver = [
     nationalityImageUrl:
         'https://www.formula1.com/content/dam/fom-website/flags/Finland.jpg.transform/2col-retina/image.jpg',
     standing: '9th',
-    dob: '',
+    dob: '-',
     teamColorHex: 0xffed1a3b,
     teamName: 'Alfa Romeo',
     teamCarImageUrl:
@@ -201,7 +201,7 @@ var list_data_driver = [
       nationalityImageUrl:
           'https://www.formula1.com/content/dam/fom-website/flags/Denmark.jpg.transform/2col-retina/image.jpg',
       standing: '11th',
-      dob: '',
+      dob: '-',
       teamColorHex: 0xffed1a3b,
       teamName: 'Haas',
       teamCarImageUrl:
@@ -213,12 +213,12 @@ var list_data_driver = [
     firstName: 'Daniel',
     lastName: 'Ricciardo',
     carNumber: 3,
-    point: 159,
+    point: 20,
     nationality: 'Australia',
     nationalityImageUrl:
         'https://www.formula1.com/content/dam/fom-website/flags/Australia.jpg.transform/2col-retina/image.jpg',
     standing: '12th',
-    dob: '',
+    dob: '-',
     teamColorHex: 0xffff7431,
     teamName: 'McLaren',
     teamCarImageUrl:
@@ -237,7 +237,7 @@ var list_data_driver = [
     nationalityImageUrl:
         'https://www.formula1.com/content/dam/fom-website/flags/France.jpg.transform/2col-retina/image.jpg',
     standing: '13th',
-    dob: '',
+    dob: '-',
     teamColorHex: 0xfff2efde,
     teamName: 'Alpha Tauri',
     teamCarImageUrl:
@@ -255,7 +255,7 @@ var list_data_driver = [
     nationalityImageUrl:
         'https://www.formula1.com/content/dam/fom-website/flags/France.jpg.transform/2col-retina/image.jpg',
     standing: '14th',
-    dob: '',
+    dob: '-',
     teamColorHex: 0xff004225,
     teamName: 'Aston Martin',
     teamCarImageUrl:
@@ -273,7 +273,7 @@ var list_data_driver = [
     nationalityImageUrl:
         'https://www.formula1.com/content/dam/fom-website/flags/France.jpg.transform/2col-retina/image.jpg',
     standing: '15th',
-    dob: '',
+    dob: '-',
     teamColorHex: 0xffed1a3b,
     teamName: 'Haas',
     teamCarImageUrl:
@@ -291,7 +291,7 @@ var list_data_driver = [
     nationalityImageUrl:
         'https://www.formula1.com/content/dam/fom-website/flags/Japan.jpg.transform/2col-retina/image.jpg',
     standing: '16th',
-    dob: '',
+    dob: '-',
     teamColorHex: 0xfff2efde,
     teamName: 'Alpha Tauri',
     teamCarImageUrl:
@@ -309,7 +309,7 @@ var list_data_driver = [
     nationalityImageUrl:
         'https://www.formula1.com/content/dam/fom-website/flags/China.jpg.transform/2col-retina/image.jpg',
     standing: '17th',
-    dob: '',
+    dob: '-',
     teamColorHex: 0xffed1a3b,
     teamName: 'Alfa Romeo',
     teamCarImageUrl:
@@ -327,7 +327,7 @@ var list_data_driver = [
     nationalityImageUrl:
         'https://www.formula1.com/content/dam/fom-website/flags/Canada.jpg.transform/2col-retina/image.jpg',
     standing: '18th',
-    dob: '',
+    dob: '-',
     teamColorHex: 0xff004225,
     teamName: 'Aston Martin',
     teamCarImageUrl:
@@ -345,7 +345,7 @@ var list_data_driver = [
     nationalityImageUrl:
         'https://www.formula1.com/content/dam/fom-website/flags/Thailand.jpg.transform/2col-retina/image.jpg',
     standing: '19th',
-    dob: '',
+    dob: '-',
     teamColorHex: 0xff192c4e,
     teamName: 'Williams',
     teamCarImageUrl:
@@ -363,7 +363,7 @@ var list_data_driver = [
     nationalityImageUrl:
         'https://www.formula1.com/content/dam/fom-website/flags/Canada.jpg.transform/2col-retina/image.jpg',
     standing: '20th',
-    dob: '',
+    dob: '-',
     teamColorHex: 0xff192c4e,
     teamName: 'Williams',
     teamCarImageUrl:
