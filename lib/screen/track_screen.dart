@@ -74,9 +74,9 @@ class _TrackScreenState extends State<TrackScreen> {
     return Scaffold(
       appBar: AppBar(
         title: _appBarTitle,
-        leading: IconButton(
-            onPressed: () => Navigator.pop(context),
-            icon: const Icon(Icons.arrow_back_ios)),
+        // leading: IconButton(
+        //     onPressed: () => Navigator.pop(context),
+        //     icon: const Icon(Icons.arrow_back_ios)),
         actions: [IconButton(onPressed: _searchPressed, icon: _searchIcon)],
       ),
       body: LayoutBuilder(
