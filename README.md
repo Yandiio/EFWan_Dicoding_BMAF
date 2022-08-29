@@ -10,7 +10,7 @@ This repository is my learning progress at class: Belajar Membuat Aplikasi Flutt
 
 1. Driver Standings based on point scored.
 - [x] List of Driver, based on standings.
-- [] Driver search.
+- [ ] Driver search.
 - [x] Detail about driver (including team).
 
 2. Track informations and detail.
